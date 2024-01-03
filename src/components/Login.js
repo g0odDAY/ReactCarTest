@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {Button, Stack, TextField} from "@mui/material";
 import Carlist from "./Carlist";
+import {SERVER_URL} from "../constraint";
 
 const Login = () =>{
     const [user,setUser] = useState({
@@ -14,7 +15,7 @@ const Login = () =>{
     }
 
     const login = () =>{
-        fetch('http://localhost:9090/'+'login',{
+        fetch(SERVER_URL+'login',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(user)

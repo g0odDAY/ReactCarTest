@@ -1,0 +1,1 @@
+export const SERVER_URL = 'https://hwangkyubok-3839805323a5.herokuapp.com/';

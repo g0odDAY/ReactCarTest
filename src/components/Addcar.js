@@ -18,12 +18,10 @@ const Addcar = ({addCar}) =>{
         setOpen(false);
     }
     const handleSave= ()=>{
-        console.log(car);
         addCar(car);
         handleClickClose();
     }
     const handleChange = (e)=> {
-        console.log(e.target.name,e.target.value);
         setCar({...car,
         [e.target.name]:e.target.value});
     }

@@ -5,6 +5,7 @@ import {Button, IconButton, Snackbar, Stack} from "@mui/material";
 import Addcar from "./Addcar";
 import EditCar from "./EditCar";
 import {gridClasses} from "@mui/system";
+import {SERVER_URL} from "../constraint";
 
 const Carlist = () =>{
     const [cars,setCars] = useState([]);
@@ -13,7 +14,7 @@ const Carlist = () =>{
         const token = sessionStorage.getItem("jwt");
         axios({
             method:'GET',
-            url:'http://localhost:9090/api/cars',
+            url:SERVER_URL,
             headers:{'Authorization':token}
         })
             .then(res=> setCars(res.data._embedded.cars))
@@ -21,7 +22,7 @@ const Carlist = () =>{
     }
     const addCar = (car)=>{
         const token = sessionStorage.getItem("jwt");
-        fetch('http://localhost:9090/api/cars', {
+        fetch(SERVER_URL, {
             method:"POST",
             headers: {
                 'Content-Type': 'application/json',
