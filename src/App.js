@@ -1,19 +1,11 @@
 
 import './App.css';
-import {AppBar, Toolbar, Typography} from "@mui/material";
-import Login from "./components/Login";
+import {AppBar, createTheme, ThemeProvider, Toolbar, Typography} from "@mui/material";
+import Login from "./pages/Login";
+
 function App() {
     return (
-        <div className="App">
-          <AppBar position="static">
-              <Toolbar>
-                  <Typography variant="6">
-                      Carshop
-                  </Typography>
-              </Toolbar>
-          </AppBar>
-            <Login/>
-        </div>
+        <Login/>
     )
 
 

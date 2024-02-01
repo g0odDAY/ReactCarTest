@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* styles.css */
+
+/* 작은 화면에 대한 스타일 */
+@media (max-width: 767px) {
+  .responsive-component {
+    font-size: 14px;
+  }
+}
+
+/* 중간 크기 화면에 대한 스타일 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .responsive-component {
+    font-size: 16px;
+  }
+}
+
+/* 큰 화면에 대한 스타일 */
+@media (min-width: 1024px) {
+  .responsive-component {
+    font-size: 18px;
+  }
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+/* 글꼴 설정 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
